@@ -1,0 +1,30 @@
+algoritmo "100"
+var
+   n1,n2,m:real
+   s:caractere
+   funcao Media(a,b:real):real
+   inicio
+     retorne (a+b)/2
+   fimfuncao
+   funcao Situacao(M:real):caractere
+   inicio
+     se(M>=7) entao
+       retorne "Aprovado"
+     senao
+       se(M>=5) e (M<7) entao
+         retorne "Recuperação"
+       senao
+        retorne "Reprovado"
+       fimse
+     fimse
+   fimfuncao
+inicio
+   escreva("1ªnota:")
+   leia(n1)
+   escreva("2ªnota:")
+   leia(n2)
+   m<-Media(n1,n2)
+   s<-Situacao(m)
+   escreva("A média do aluno foi",m:5:2,". Situação do aluno(a):",s)
+   
+fimalgoritmo
